@@ -1,2 +1,2 @@
 # tsc-demo
-typescript on webpack
+typescript on webpack3
