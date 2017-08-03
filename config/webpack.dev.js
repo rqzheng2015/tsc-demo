@@ -59,7 +59,7 @@ module.exports = {
              },*/
             {
                 test: /\.(js|jsx)$/,
-                use: 'babel-loader?cacheDirectory',
+                use: 'source-map-loader',
                 exclude: /node_modules/,
                 enforce: "pre"
                 /*include: path.resolve(__dirname, 'src/js')*/
