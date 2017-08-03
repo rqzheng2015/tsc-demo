@@ -1,7 +1,10 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
 class Student {
     fullName: string;
 
-    constructor(public firstName: any, public middleInitial: any, public lastName: any) {
+    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
         this.fullName = firstName + " " + middleInitial + " " + lastName;
     }
 }
@@ -15,6 +18,6 @@ function hello(person: Person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
 
-var user = new Student("Jane", "M.", "User");
+let user = new Student("Jane", "M.", "User");
 
 document.body.innerHTML = hello(user);
