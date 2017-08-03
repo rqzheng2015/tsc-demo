@@ -8,7 +8,7 @@ const bundleConfig = require("../dist/config/bundle-config.json");
 
 module.exports = {
     entry: {
-        main: './src/js/index.js',
+        main: './src/js/hello.ts',
     },
     output: {
         filename: '[name].js',
@@ -60,6 +60,13 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 use: 'babel-loader?cacheDirectory',
+                exclude: /node_modules/,
+                enforce: "pre"
+                /*include: path.resolve(__dirname, 'src/js')*/
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                use: 'awesome-typescript-loader',
                 exclude: /node_modules/,
                 /*include: path.resolve(__dirname, 'src/js')*/
             }
